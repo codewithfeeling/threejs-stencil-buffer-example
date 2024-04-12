@@ -29,7 +29,7 @@ camera.position.set(4, 5, 4);
 // LIGHTS
 scene.add(new THREE.AmbientLight(0xffffff, 0.9));
 
-const dirLight = new THREE.DirectionalLight(0xffffff, 1);
+const dirLight = new THREE.DirectionalLight(0xffffff, 10);
 dirLight.position.set(5, 10, 7.5);
 dirLight.castShadow = true;
 dirLight.shadow.camera.right = 2;
@@ -105,7 +105,7 @@ function initCube() {
     boxBorderMat.stencilRef = 0;
     boxBorderMat.stencilFunc = THREE.EqualStencilFunc;
     const boxBorderGeom = new THREE.BoxGeometry();
-    scene.add(new THREE.Mesh(boxBorderGeom, boxBorderMat));
+    // scene.add(new THREE.Mesh(boxBorderGeom, boxBorderMat));
 }
 
 function initPlanes () {
